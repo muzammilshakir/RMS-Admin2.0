@@ -2,7 +2,7 @@
 import React from "react";
 import classnames from "classnames";
 import {
-  // Button,
+  Button,
   // Collapse,
   // DropdownToggle,
   // DropdownMenu,
@@ -15,11 +15,13 @@ import {
   // InputGroup,
   NavbarBrand,
   Navbar,
-  // NavItem,
+  NavItem,
   // NavLink,
-  // Nav,
+  Nav,
   Container,
 } from "reactstrap";
+import isAuthenticated from "../../auth/index";
+import {Redirect} from 'react-router-dom';
 
 class AdminNavbar extends React.Component {
   constructor(props) {
@@ -116,6 +118,17 @@ class AdminNavbar extends React.Component {
               <span className="navbar-toggler-bar navbar-kebab" />
               <span className="navbar-toggler-bar navbar-kebab" />
             </button>
+            <Nav navbar>
+
+              <NavItem>
+                <Button color="danger" onClick={() => {
+                  sessionStorage.setItem('HMS-Admin', false);
+                  this.setState({rough: true});
+                }} >Log Out</Button>
+              </NavItem>
+              {!isAuthenticated(sessionStorage.getItem('HMS-Admin')) ? <Redirect to="/auth/login" /> : <></>}
+      
+            </Nav>
           </Container>
         </Navbar>
       </>

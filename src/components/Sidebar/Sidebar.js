@@ -153,7 +153,7 @@ class Sidebar extends React.Component {
             href="https://www.rms-web-client.herokuapp.com"
             className="simple-text logo-normal"
           >
-            HMS
+            HMS - Admin
           </a>
         </div>
 

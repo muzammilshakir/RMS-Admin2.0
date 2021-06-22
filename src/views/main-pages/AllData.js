@@ -41,7 +41,7 @@ class AllData extends React.Component {
         <div className="content">
         {console.log(isAuthenticated(sessionStorage.getItem('HMS-Admin')))}
         {!isAuthenticated(sessionStorage.getItem('HMS-Admin')) ? <Redirect to="/auth/login" /> : <></>}
-        {/* <Row>
+        <Row>
             <Col lg="3" md="6" sm="6">
               <Card className="card-stats">
                 <CardBody>
@@ -204,7 +204,7 @@ class AllData extends React.Component {
                 </CardBody>
               </Card>
             </Col>
-          </Row> */}
+          </Row>
           <Row>
             <Col md="12">
               <Card>
