@@ -64,7 +64,7 @@ class Pages extends React.Component {
       email: email,
       password: password
     }
-    var response = await axios.post("https://rms-web-api.herokuapp.com/admin/login", header, {withCredentials: true}) ;
+    var response = await axios.post("https://hms-web-api.herokuapp.com/admin/login", header, {withCredentials: true}) ;
     if (response.data.message === "Admin logged in successfully") {
       sessionStorage.setItem('HMS-Admin', response.data.token);
       // this.gettingResources();

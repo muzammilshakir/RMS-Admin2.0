@@ -175,7 +175,7 @@ class Admin extends React.Component {
   async deletingFloor(id) {
     console.log("Deleting Floors");
     try {
-      var response = await axios.delete("https://rms-web-api.herokuapp.com/floor/" + id , {withCredentials: true}) ;
+      var response = await axios.delete("https://hms-web-api.herokuapp.com/floor/" + id , {withCredentials: true}) ;
       console.log(response) ;
     }
     catch(error) {
@@ -189,7 +189,7 @@ class Admin extends React.Component {
       var header = {
         name: name 
       }
-      var response = await axios.post("https://rms-web-api.herokuapp.com/floor", header, {withCredentials: true}) ;
+      var response = await axios.post("https://hms-web-api.herokuapp.com/floor", header, {withCredentials: true}) ;
       console.log(response) ;
     }
     catch(error) {
@@ -200,7 +200,7 @@ class Admin extends React.Component {
   async gettingFloors() {
     console.log("Getting Floors");
     try {
-      var response = await axios.get("https://rms-web-api.herokuapp.com/floor", {withCredentials: true}) ;
+      var response = await axios.get("https://hms-web-api.herokuapp.com/floor", {withCredentials: true}) ;
       console.log(response) ;
       this.setState({floorData: response.data.data});
     }
@@ -213,7 +213,7 @@ class Admin extends React.Component {
   async deletingRoom(id) {
     console.log("Deleting Rooms");
     try {
-      var response = await axios.delete("https://rms-web-api.herokuapp.com/room/" + id , {withCredentials: true}) ;
+      var response = await axios.delete("https://hms-web-api.herokuapp.com/room/" + id , {withCredentials: true}) ;
       console.log(response) ;
     }
     catch(error) {
@@ -230,7 +230,7 @@ class Admin extends React.Component {
         name: name,
         floorId: id 
       }
-      var response = await axios.post("https://rms-web-api.herokuapp.com/room", header, {withCredentials: true}) ;
+      var response = await axios.post("https://hms-web-api.herokuapp.com/room", header, {withCredentials: true}) ;
       console.log(response) ;
     }
     catch(error) {
@@ -241,7 +241,7 @@ class Admin extends React.Component {
   async gettingRooms() {
     console.log("Getting Rooms");
     try {
-      var response = await axios.get("https://rms-web-api.herokuapp.com/room", {withCredentials: true}) ;
+      var response = await axios.get("https://hms-web-api.herokuapp.com/room", {withCredentials: true}) ;
       console.log(response) ;
       this.setState({roomData: response.data.data});
     }
@@ -254,7 +254,7 @@ class Admin extends React.Component {
   async deletingAllottee(id) {
     console.log("Deleting Allottee");
     try {
-      var response = await axios.delete("https://rms-web-api.herokuapp.com/allottee/" + id , {withCredentials: true}) ;
+      var response = await axios.delete("https://hms-web-api.herokuapp.com/allottee/" + id , {withCredentials: true}) ;
       console.log(response) ;
     }
     catch(error) {
@@ -283,7 +283,7 @@ class Admin extends React.Component {
         guardianContactNumber: guardianContactNumber,
         bloodGroup: bloodGroup,
       }
-      var response = await axios.post("https://rms-web-api.herokuapp.com/allottee", header, {withCredentials: true}) ;
+      var response = await axios.post("https://hms-web-api.herokuapp.com/allottee", header, {withCredentials: true}) ;
       console.log(response) ;
     }
     catch(error) {
@@ -310,7 +310,7 @@ class Admin extends React.Component {
         guardianContactNumber: guardianContactNumber,
         bloodGroup: bloodGroup,
       }
-      var response = await axios.put("https://rms-web-api.herokuapp.com/allottee/" + id, header, {withCredentials: true}) ;
+      var response = await axios.put("https://hms-web-api.herokuapp.com/allottee/" + id, header, {withCredentials: true}) ;
       console.log(response) ;
     }
     catch(error) {
@@ -321,7 +321,7 @@ class Admin extends React.Component {
   async gettingAllottee() {
     console.log("Getting Allottee");
     try {
-      var response = await axios.get("https://rms-web-api.herokuapp.com/allottee", {withCredentials: true}) ;
+      var response = await axios.get("https://hms-web-api.herokuapp.com/allottee", {withCredentials: true}) ;
       console.log(response) ;
       this.setState({allotteeData: response.data.data});
     }
@@ -334,7 +334,7 @@ class Admin extends React.Component {
   async deletingBed(id) {
     console.log("Deleting Bed");
     try {
-      var response = await axios.delete("https://rms-web-api.herokuapp.com/bed/" + id , {withCredentials: true}) ;
+      var response = await axios.delete("https://hms-web-api.herokuapp.com/bed/" + id , {withCredentials: true}) ;
       console.log(response) ;
     }
     catch(error) {
@@ -352,7 +352,7 @@ class Admin extends React.Component {
         roomId: id,
         name: name
       }
-      var response = await axios.post("https://rms-web-api.herokuapp.com/bed", header, {withCredentials: true}) ;
+      var response = await axios.post("https://hms-web-api.herokuapp.com/bed", header, {withCredentials: true}) ;
       console.log(response) ;
     }
     catch(error) {
@@ -363,7 +363,7 @@ class Admin extends React.Component {
   async gettingBeds() {
     console.log("Getting Rooms");
     try {
-      var response = await axios.get("https://rms-web-api.herokuapp.com/bed", {withCredentials: true}) ;
+      var response = await axios.get("https://hms-web-api.herokuapp.com/bed", {withCredentials: true}) ;
       console.log(response) ;
       this.setState({bedData: response.data.data});
     }
@@ -376,7 +376,7 @@ class Admin extends React.Component {
   async deletingAllotment(id) {
     console.log("Deleting Allotment");
     try {
-      var response = await axios.delete("https://rms-web-api.herokuapp.com/allotment/" + id , {withCredentials: true}) ;
+      var response = await axios.delete("https://hms-web-api.herokuapp.com/allotment/" + id , {withCredentials: true}) ;
       console.log(response) ;
     }
     catch(error) {
@@ -394,7 +394,7 @@ class Admin extends React.Component {
         registerationCharges: registeraitonCharges,
         monthlyRent: monthlyRent,
       }
-      var response = await axios.post("https://rms-web-api.herokuapp.com/allotment", header, {withCredentials: true}) ;
+      var response = await axios.post("https://hms-web-api.herokuapp.com/allotment", header, {withCredentials: true}) ;
       console.log(response) ;
     }
     catch(error) {
@@ -405,7 +405,7 @@ class Admin extends React.Component {
   async gettingAllotments() {
     console.log("Getting Allotments");
     try {
-      var response = await axios.get("https://rms-web-api.herokuapp.com/allotment", {withCredentials: true}) ;
+      var response = await axios.get("https://hms-web-api.herokuapp.com/allotment", {withCredentials: true}) ;
       console.log(response) ;
       this.setState({allotmentData: response.data.data});
     }
@@ -418,7 +418,7 @@ class Admin extends React.Component {
   async deletingRent(id) {
     console.log("Deleting Rent Receipt");
     try {
-      var response = await axios.delete("https://rms-web-api.herokuapp.com/rentreceipts/" + id, {withCredentials: true} ) ;
+      var response = await axios.delete("https://hms-web-api.herokuapp.com/rentreceipts/" + id, {withCredentials: true} ) ;
       console.log(response) ;
     }
     catch(error) {
@@ -437,7 +437,7 @@ class Admin extends React.Component {
         modeOfPayment: modeOfPayment,
         receivingPerson: receivingPerson
       }
-      var response = await axios.post("https://rms-web-api.herokuapp.com/rentreceipts", header, {withCredentials: true}) ;
+      var response = await axios.post("https://hms-web-api.herokuapp.com/rentreceipts", header, {withCredentials: true}) ;
       console.log(response) ;
     }
     catch(error) {
@@ -448,7 +448,7 @@ class Admin extends React.Component {
   async gettingRent() { 
     console.log("Getting REnt");
     try {
-      var response = await axios.get("https://rms-web-api.herokuapp.com/rentreceipts", {withCredentials: true}) ;
+      var response = await axios.get("https://hms-web-api.herokuapp.com/rentreceipts", {withCredentials: true}) ;
       console.log(response) ;
       this.setState({rentData: response.data.data});
     }
@@ -461,7 +461,7 @@ class Admin extends React.Component {
   async deletingVisitor(id) {
     console.log("Deleting Visitor Log");
     try {
-      var response = await axios.delete("https://rms-web-api.herokuapp.com/visitorLog/" + id , {withCredentials: true}) ;
+      var response = await axios.delete("https://hms-web-api.herokuapp.com/visitorLog/" + id , {withCredentials: true}) ;
       console.log(response) ;
     }
     catch(error) {
@@ -482,7 +482,7 @@ class Admin extends React.Component {
         edo: expectedDateOfArrival,
         self: self
       }
-      var response = await axios.post("https://rms-web-api.herokuapp.com/visitorLog", header, {withCredentials: true}) ;
+      var response = await axios.post("https://hms-web-api.herokuapp.com/visitorLog", header, {withCredentials: true}) ;
       console.log(response) ;
     }
     catch(error) {
@@ -493,7 +493,7 @@ class Admin extends React.Component {
   async gettingVisitor() { 
     console.log("Getting Visitor Log");
     try {
-      var response = await axios.get("https://rms-web-api.herokuapp.com/visitorLog", {withCredentials: true}) ;
+      var response = await axios.get("https://hms-web-api.herokuapp.com/visitorLog", {withCredentials: true}) ;
       console.log(response) ;
       this.setState({visitorData: response.data.data});
     }
@@ -506,7 +506,7 @@ class Admin extends React.Component {
   async deletingMeal(id) {
     console.log("Deleting Meal");
     try {
-      var response = await axios.delete("https://rms-web-api.herokuapp.com/meal/" + id , {withCredentials: true}) ;
+      var response = await axios.delete("https://hms-web-api.herokuapp.com/meal/" + id , {withCredentials: true}) ;
       console.log(response) ;
     }
     catch(error) {
@@ -522,7 +522,7 @@ class Admin extends React.Component {
         time: time,
         food: food
       }
-      var response = await axios.post("https://rms-web-api.herokuapp.com/meal", header, {withCredentials: true}) ;
+      var response = await axios.post("https://hms-web-api.herokuapp.com/meal", header, {withCredentials: true}) ;
       console.log(response) ;
     }
     catch(error) {
@@ -533,7 +533,7 @@ class Admin extends React.Component {
   async gettingMeal() { 
     console.log("Getting Meal");
     try {
-      var response = await axios.get("https://rms-web-api.herokuapp.com/meal", {withCredentials: true}) ;
+      var response = await axios.get("https://hms-web-api.herokuapp.com/meal", {withCredentials: true}) ;
       console.log(response) ;
       this.setState({mealData: response.data.data});
     }
@@ -546,7 +546,7 @@ class Admin extends React.Component {
   async deletingExpense(id) {
     console.log("DeletingExpense");
     try {
-      var response = await axios.delete("https://rms-web-api.herokuapp.com/expense/" + id , {withCredentials: true}) ;
+      var response = await axios.delete("https://hms-web-api.herokuapp.com/expense/" + id , {withCredentials: true}) ;
       console.log(response) ;
     }
     catch(error) {
@@ -562,7 +562,7 @@ class Admin extends React.Component {
         category: category,
         amount: amount
       }
-      var response = await axios.post("https://rms-web-api.herokuapp.com/expense", header, {withCredentials: true}) ;
+      var response = await axios.post("https://hms-web-api.herokuapp.com/expense", header, {withCredentials: true}) ;
       console.log(response) ;
     }
     catch(error) {
@@ -573,7 +573,7 @@ class Admin extends React.Component {
   async gettingExpense() { 
     console.log("Getting Expenses");
     try {
-      var response = await axios.get("https://rms-web-api.herokuapp.com/expense", {withCredentials: true}) ;
+      var response = await axios.get("https://hms-web-api.herokuapp.com/expense", {withCredentials: true}) ;
       console.log(response) ;
       this.setState({expenseData: response.data.data});
     }
@@ -591,7 +591,7 @@ class Admin extends React.Component {
         email: email,
         password: password
       }
-      var response = await axios.post("https://rms-web-api.herokuapp.com/admin/register", header, {withCredentials: true}) ;
+      var response = await axios.post("https://hms-web-api.herokuapp.com/admin/register", header, {withCredentials: true}) ;
       console.log(response) ;
     }
     catch(error) {
@@ -602,7 +602,7 @@ class Admin extends React.Component {
   async gettingAdmin() { 
     console.log("Getting Admins");
     try {
-      var response = await axios.get("https://rms-web-api.herokuapp.com/admin/get-all-admins", {withCredentials: true}) ;
+      var response = await axios.get("https://hms-web-api.herokuapp.com/admin/get-all-admins", {withCredentials: true}) ;
       console.log(response) ;
       this.setState({adminData: response.data.data});
     }
